@@ -2,8 +2,8 @@ package Config
 
 import (
 	"fmt"
-
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql" // 添加 MySQL dialect
 )
 
 var DB *gorm.DB
@@ -19,11 +19,11 @@ type DBConfig struct {
 
 func BuildDBConfig() *DBConfig {
 	dbConfig := DBConfig{
-		Host:     "0.0.0.0",
-		Port:     3306,
+		Host:     "monorail.proxy.rlwy.net",
+		Port:     33633,
 		User:     "root",
-		DBName:   "todos",
-		Password: "rootadmin",
+		DBName:   "railway",
+		Password: "IOQcAdyvmMmWoINJlorCcQdUsdPGSNzz",
 	}
 	return &dbConfig
 }

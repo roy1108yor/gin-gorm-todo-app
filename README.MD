@@ -4,16 +4,16 @@ It is a just simple REST API with Go using:
 2. **Gorm** 
 
 ## Installation & Run
-```bash
-# Download this project
-$ go get github.com/go-sql-driver/mysql
 
-# Download Gin Framework
-$ go get github.com/gin-gonic/gin
+1. **Initialize Go modules**
+    ```bash
+    go mod tidy
+    ```
 
-# Download GORM
-$ go get github.com/jinzhu/gorm
-```
+2. **Run the application**
+    ```bash
+    go run main.go
+    ```
 
 ## DB Setup
 1. Go to Config/Database.go

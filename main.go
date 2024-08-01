@@ -7,6 +7,7 @@ import (
 	"github.com/ektagarg/gin-gorm-todo-app/Models"
 	"github.com/ektagarg/gin-gorm-todo-app/Routes"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql" // 添加 MySQL dialect
 )
 
 var err error
@@ -17,6 +18,7 @@ func main() {
 
 	if err != nil {
 		fmt.Println("statuse: ", err)
+		// return
 	}
 
 	defer Config.DB.Close()
